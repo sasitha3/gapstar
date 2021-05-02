@@ -1,0 +1,7 @@
+Run in locale machine
+
+Run angular-image-gride-scroller and server-side node js application.
+
+When added an image, shows in bottom. 
+Validations has not added. 
+No docker filer added.

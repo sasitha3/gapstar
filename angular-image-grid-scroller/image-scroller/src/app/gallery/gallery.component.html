@@ -1,0 +1,82 @@
+<main class="gallery-container">
+  <mat-progress-spinner
+    mode="indeterminate"
+    class="spinner"
+    *ngIf="loadingImages"
+  ></mat-progress-spinner>
+  <cdk-virtual-scroll-viewport
+    *ngIf="!loadingImages"
+    [itemSize]="20"
+  >
+    <ul class="gallery">
+      <li class="image" *cdkVirtualFor="let image of galleryImages; templateCacheSize: 1">
+          <mat-card class="result">
+              <mat-card-content>
+                <h2 class="example-h2">Select Image</h2>
+            
+                <section class="example-section">
+                    <button mat-button color="primary" (click)="saveImage(image)">Add image</button>
+                </section>
+              </mat-card-content>
+            </mat-card>
+        <img
+          [src]="image.picture"
+        />
+
+        <b>{{image.id}}</b>
+
+      </li>
+    </ul>
+
+  </cdk-virtual-scroll-viewport>
+</main>
+<main class="gallery-container">
+  <mat-progress-spinner
+    mode="indeterminate"
+    class="spinner"
+    *ngIf="loadingImages"
+  ></mat-progress-spinner>
+  <cdk-virtual-scroll-viewport
+    *ngIf="!loadingImages"
+    [itemSize]="20"
+  >
+    <ul class="gallery">
+      <li class="image" *cdkVirtualFor="let image of galleryImages; templateCacheSize: 1">
+          <mat-card class="result">
+              <mat-card-content>
+                <h2 class="example-h2">Select Image</h2>
+            
+                <section class="example-section">
+                    <button mat-button color="primary" (click)="saveImage(image)">Add image</button>
+                </section>
+              </mat-card-content>
+            </mat-card>
+        <img
+          [src]="image.picture"
+        />
+
+        <b>{{image.id}}</b>
+
+      </li>
+    </ul>
+
+  </cdk-virtual-scroll-viewport>
+<h1>Selected Images</h1>
+  <cdk-virtual-scroll-viewport
+    *ngIf="!loadingImages"
+    [itemSize]="20"
+  >
+    <ul class="gallery">
+      <li class="image" *cdkVirtualFor="let image of selectedImages; templateCacheSize: 1">
+         
+        <img
+          [src]="image.picture"
+        />
+
+        <b>{{image.id}}</b>
+
+      </li>
+    </ul>
+
+  </cdk-virtual-scroll-viewport>
+</main>

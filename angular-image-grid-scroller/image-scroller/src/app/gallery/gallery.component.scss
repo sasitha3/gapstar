@@ -1,0 +1,47 @@
+$max-width: 1200px;
+$image-width: 180px;
+$image-height: 250px;
+$image-container-height: 275px;
+
+.gallery {
+  max-width: $max-width;
+  margin: 0 auto; padding: 0;
+  list-style: none;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fill, $image-width);
+  grid-gap: 1rem;
+  justify-content: center;
+}
+
+.image {
+  text-align: center;
+}
+img {
+  display: block;
+  width: $image-width;
+  height: $image-height;
+  margin-bottom: 5px;
+}
+cdk-virtual-scroll-viewport {
+  height: 90vh;
+  margin: 45px auto 20px;
+  scrollbar-color: #ff4081 #000000;
+  scrollbar-width: thin;
+}
+
+.spinner {
+  margin: 0 auto;
+}
+
+.example-margin {
+  margin: 0 12px;
+  border: #ff4081;
+}
+
+.example-section {
+  display: flex;
+  align-content: center;
+  align-items: center;
+  height: 60px;
+}
